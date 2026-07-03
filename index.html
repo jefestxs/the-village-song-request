@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Village Song Requester</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <header id="header">
+            <h1>The Village Song Requester</h1>
+            <p>Help build the soundtrack for Caribbean Night! Share music that represents you and discover
+                what the community is listening to.
+            </p>
+        </header>
+
+        <section id="playlist">
+            <h2>Requested Songs</h2>
+            <input
+                type="text"
+                id="songSearch"
+                placeholder="Search for a song..."
+            >
+            <div id="playlistContainer">
+            </div>
+        </section>
+
+        <section id="userinfo">
+            <h2>Your Information</h2>
+            <label>Name</label>
+            <input
+                type="text"
+                id="name"
+                placeholder="Your name"
+            >
+            <label>Email (optional)</label>
+            <input
+                type="email"
+                id="email"
+                placeholder="you@example.com"
+            >
+            <label>Country</label>
+            <select id="country"></select>
+        </section>
+
+        <section id="request">
+            <h2>Request a Song</h2>
+            <input
+                type="text"
+                id="songLink"
+                placeholder="Paste a Spotify or Youtube link"
+                >
+            <button id="submitSong">Submit Song</button>
+        </section>
+
+        <section id="countries">
+            <h2>Countries Represented</h2>
+
+            <div id="countriesContainer">
+            </div>
+
+        </section>
+
+        <footer>
+            <p>Made with ❤️ by <a href="https://www.instagram.com/thevillagepgh" target="_blank">The Village PGH</a></p>
+        </footer>
+        
+    </main>
+</body>
+</html>
