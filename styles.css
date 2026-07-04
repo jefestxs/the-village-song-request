@@ -60,8 +60,95 @@ button:hover {
 #playlistContainer,
 #countriesContainer {
     min-height: 120px;
-    border: 2px dashed #cccccc;
+    border: 1px solid #e5e5e5;
     border-radius: 8px;
     padding:16px;
     color: #777;
+}
+
+#playlistContainer {
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+#emailContainer {
+    display: none;
+}
+
+.song-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 16px;
+
+    margin-bottom: 12px;
+
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.song-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.song-info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.song-info p {
+    margin: 4px;
+    color: #666;
+}
+
+.request-count {
+    font-weight: bold;
+    font-size: 14px;
+    color: #555;
+}
+
+.searchInput {
+    margin-bottom: 20px;
+}
+
+.country-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+
+    margin-bottom: 10px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.country-name {
+    font-weight: 600;
+}
+
+.country-count {
+    color: #777;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+}
+
+.checkbox-label input {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
 }

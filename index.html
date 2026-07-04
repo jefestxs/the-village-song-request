@@ -20,7 +20,7 @@
             <h2>Requested Songs</h2>
             <input
                 type="text"
-                id="songSearch"
+                id="searchInput"
                 placeholder="Search for a song..."
             >
             <div id="playlistContainer">
@@ -28,33 +28,61 @@
             </div>
         </section>
 
-        <section id="userinfo">
-            <h2>Your Information</h2>
-            <label>Name</label>
-            <input
-                type="text"
-                id="name"
-                placeholder="Your name"
-            >
-            <label>Email (optional)</label>
-            <input
-                type="email"
-                id="email"
-                placeholder="you@example.com"
-            >
-            <label>Country</label>
-            <select id="country"></select>
-        </section>
+        <form id="songRequestForm">
 
-        <section id="request">
-            <h2>Request a Song</h2>
-            <input
-                type="text"
-                id="songLink"
-                placeholder="Paste a Spotify or Youtube link"
-                >
-            <button id="submitSong">Submit Song</button>
-        </section>
+            <section id="userInfo">
+
+                <h2>Fill out your information to request a song</h2>
+
+                <label for="nameInput">Name *</label>
+                <input
+                    type="text"
+                    id="nameInput"
+                    placeholder="Your name"
+                    required>
+
+                <label for="countrySelect">Country *</label>
+                <select id="countrySelect"></select>
+
+                <label class="checkbox-label">
+                    <input
+                        type="checkbox"
+                        id="newsletterCheckbox">
+                    Send me Village updates
+                </label>
+
+                <div id="emailContainer">
+
+                    <label for="emailInput">Email</label>
+
+                    <input
+                        type="email"
+                        id="emailInput"
+                        placeholder="you@example.com">
+
+                </div>
+            </section>
+
+            <section id="request">
+                <h2>Request a song</h2>
+
+                <label for="songLinkInput">Spotify or Youtube Link *</label>
+                <input
+                    type="text"
+                    id="songLinkInput"
+                    placeholder="Paste a Spotify or Youtube link"
+                    required>
+
+                <!--Honeypot-->
+                <div style="display: none;">
+                    <input type="text"
+                    id="websiteInput"
+                    autocomplete="off">
+                </div>
+
+                <button id="submitButton" type="submit">Submit Song Request</button>
+            </section>
+        </form>
 
         <section id="countries">
             <h2>Countries Represented</h2>
@@ -70,5 +98,6 @@
         </footer>
         
     </main>
+<script src="script.js"></script>
 </body>
 </html>
